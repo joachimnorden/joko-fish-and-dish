@@ -13,6 +13,5 @@ class Reservation(models.Model):
     time = models.TimeField()
     status = models.IntegerField(choices=STATUS, default=0)
 
-
-def __str__(self):
-    return self.fname
+    def __str__(self):
+        return self.fname + ' ' + self.lname
