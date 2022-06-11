@@ -7,10 +7,10 @@ class Reservation(models.Model):
     fname = models.CharField(max_length=50)
     lname = models.CharField(max_length=100)
     email = models.EmailField()
-    phone = models.IntegerField()
+    phone = models.CharField(max_length=100)
     number_of_persons = models.IntegerField()
     date = models.DateField()
-    time = models.TimeField()
+    time = models.CharField(max_length=100)
     status = models.IntegerField(choices=STATUS, default=0)
 
     def __str__(self):
